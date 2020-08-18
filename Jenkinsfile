@@ -16,9 +16,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/Myraa/mule-maven-deployment-demo.git'
-
                 // Run Maven 
                 cmd_exec("mvn clean install -Dmaven.test.skip=true")
                 cmd_exec("echo %VERSION%")

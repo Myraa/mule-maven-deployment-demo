@@ -40,6 +40,32 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+			<plugin>
+        <groupId>org.mule.tools.maven</groupId>
+        <artifactId>mule-maven-plugin</artifactId>
+        <configuration>
+          <deploymentType>cloudhub</deploymentType>
+          <muleVersion>${mule.version}</muleVersion> 
+          <username>${anypoint.username}</username> 
+          <password>${anypoint.password}</password> 
+          <applicationName>${artifactId}</applicationName>
+          <environment>${cloundhub.env}</environment> 
+          <businessGroup>${anypoint.businessGroup}</businessGroup>
+          <region>${cloudhub.region}</region>
+          <uri>${anypoint.uri}</uri> 
+          <workerType>${cloudhub.workerType}</workerType>
+          <workers>${cloudhub.workers}</workers>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 		</plugins>
 	</build>
 	<!-- Mule Dependencies -->
@@ -109,32 +135,4 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-<profile>
- <id>standalone</id>
- <build>
- <plugins>
- <plugin>
- <groupId>org.mule.tools.maven</groupId>
- <artifactId>mule-maven-plugin</artifactId>
- <configuration>
- <deploymentType>standalone</deploymentType>
- <muleVersion>${mule.version}</muleVersion> 
- <muleHome>${mule.home}</muleHome> 
- <applicationName>${artifactId}</applicationName> 
- <community>${mule.runtime.community}</community> 
- </configuration>
- <executions>
- <execution>
- <id>deploy</id>
- <phase>deploy</phase>
- <goals>
- <goal>deploy</goal>
- </goals>
- </execution>
- </executions>
- </plugin>
- </plugins>
- </build>
-</profile>
-
 </project>

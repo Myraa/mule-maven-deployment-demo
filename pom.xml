@@ -9,13 +9,6 @@
 	<packaging>mule</packaging>
 	<name>Mule mule-maven-deployment-demo Application</name>
 
-	<parent>
-		<groupId>com.javastreets</groupId>
-		<artifactId>mule-maven-parent-pom</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
-		<relativePath>../mule-maven-parent-pom/pom.xml</relativePath>
-	</parent>
-
 	<properties>
 		<mule.version>3.9.0</mule.version>
 		<mule.tools.version>1.7</mule.tools.version>

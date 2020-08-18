@@ -4,7 +4,6 @@ pipeline {
     environment {
 
     PATH = "PATH;C:\\WINDOWS\\SYSTEM32"
-    VERSION = readMavenPom().getVersion()
     
     }
 

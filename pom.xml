@@ -109,6 +109,32 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-
+<profile>
+ <id>standalone</id>
+ <build>
+ <plugins>
+ <plugin>
+ <groupId>org.mule.tools.maven</groupId>
+ <artifactId>mule-maven-plugin</artifactId>
+ <configuration>
+ <deploymentType>standalone</deploymentType>
+ <muleVersion>${mule.version}</muleVersion> 
+ <muleHome>${mule.home}</muleHome> 
+ <applicationName>${artifactId}</applicationName> 
+ <community>${mule.runtime.community}</community> 
+ </configuration>
+ <executions>
+ <execution>
+ <id>deploy</id>
+ <phase>deploy</phase>
+ <goals>
+ <goal>deploy</goal>
+ </goals>
+ </execution>
+ </executions>
+ </plugin>
+ </plugins>
+ </build>
+</profile>
 
 </project>

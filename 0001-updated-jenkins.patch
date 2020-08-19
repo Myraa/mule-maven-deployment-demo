@@ -1,0 +1,25 @@
+From ee7598236413af849113ddeff9a1f3cb96441719 Mon Sep 17 00:00:00 2001
+From: prasadboddu <prasad.boddu@nttdata.com>
+Date: Wed, 19 Aug 2020 17:13:47 -0500
+Subject: [PATCH] updated jenkins
+
+---
+ Jenkinsfile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Jenkinsfile b/Jenkinsfile
+index a6e10f2..283e37d 100644
+--- a/Jenkinsfile
++++ b/Jenkinsfile
+@@ -7,7 +7,7 @@ pipeline {
+     
+     }
+     tools {
+-        // Install the Maven version configured as "M3" and add it to the path.
++        // Install the Maven version configured as "M3" and add it to the path.test
+         maven "M3"
+     }
+ 
+-- 
+2.27.0.windows.1
+

@@ -1,0 +1,72 @@
+From c84b911b250cd3617593dc75cee7dc8c4b82c4f9 Mon Sep 17 00:00:00 2001
+From: prasadboddu <prasad.boddu@nttdata.com>
+Date: Wed, 19 Aug 2020 17:21:57 -0500
+Subject: [PATCH 2/2] updated the changes
+
+---
+ 0001-updated-jenkins.patch | 25 +++++++++++++++++++++++++
+ Jenkinsfile                |  2 +-
+ pom.xml                    |  2 +-
+ 3 files changed, 27 insertions(+), 2 deletions(-)
+ create mode 100644 0001-updated-jenkins.patch
+
+diff --git a/0001-updated-jenkins.patch b/0001-updated-jenkins.patch
+new file mode 100644
+index 0000000..616014a
+--- /dev/null
++++ b/0001-updated-jenkins.patch
+@@ -0,0 +1,25 @@
++From ee7598236413af849113ddeff9a1f3cb96441719 Mon Sep 17 00:00:00 2001
++From: prasadboddu <prasad.boddu@nttdata.com>
++Date: Wed, 19 Aug 2020 17:13:47 -0500
++Subject: [PATCH] updated jenkins
++
++---
++ Jenkinsfile | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git a/Jenkinsfile b/Jenkinsfile
++index a6e10f2..283e37d 100644
++--- a/Jenkinsfile
+++++ b/Jenkinsfile
++@@ -7,7 +7,7 @@ pipeline {
++     
++     }
++     tools {
++-        // Install the Maven version configured as "M3" and add it to the path.
+++        // Install the Maven version configured as "M3" and add it to the path.test
++         maven "M3"
++     }
++ 
++-- 
++2.27.0.windows.1
++
+diff --git a/Jenkinsfile b/Jenkinsfile
+index 283e37d..7bce555 100644
+--- a/Jenkinsfile
++++ b/Jenkinsfile
+@@ -7,7 +7,7 @@ pipeline {
+     
+     }
+     tools {
+-        // Install the Maven version configured as "M3" and add it to the path.test
++        // Install the Maven version configured as "M3" and add it to the path.test2
+         maven "M3"
+     }
+ 
+diff --git a/pom.xml b/pom.xml
+index 487c647..9405d33 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -2,7 +2,7 @@
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+ 
+-	<modelVersion>4.0.0</modelVersion>
++	<modelVersion>4.0.1</modelVersion>
+ 	<groupId>com.javastreets</groupId>
+ 	<artifactId>mule-maven-deployment-demo</artifactId>
+ 	<version>1.0.0-SNAPSHOT</version>
+-- 
+2.27.0.windows.1
+
